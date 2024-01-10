@@ -4,46 +4,46 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-.matrix {
+.aaa {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.matrix__img {
+.aaa img {
   width: 100%;
 }
-.matrix .matrix__link {
+.aaa .more_inf {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-  .matrix { 
-    text-align: center;
+  .aaa { text-align: center;
   }
 }
-
-.note {
+.centered-main-page-element {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-.note__task {
+.task {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
-.note-wrapper {
+.task-row-wrapper {
   display: flex;
 }
 ul {
-  margin: 0;
+  margin:0;
   padding: 0px;
 }
-.todo-list-item, .title {
+li,
+h3 {
   list-style: none;
 }
-input,button{
+input,
+button{
   outline: none;
 }
 button {
@@ -59,8 +59,8 @@ button:hover {
   color: #3a3a3a;
 }
 /* Heading */
-.title,
-.note__label[for="new-task"] {
+h3,
+label[for='new-task'] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -86,37 +86,37 @@ input[type="text"]:focus {
 }
 
 /* New Task */
-.note__label[for="new-task"] {
+label[for='new-task'] {
   display: block;
   margin: 0 0 20px;
 }
-.note__task#new-task {
+input#new-task {
   width: 318px;
 }
 
 /* Task list */
-.todo-list-item {
+li {
   overflow: hidden;
   padding: 20px 0;
-  border-bottom: 1px solid #eee;  
+  border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.todo-list-item > * {
+li > * {
   vertical-align: middle;
 }
 
-.todo-list-item > input[type="checkbox"] {
+li > input[type="checkbox"] {
   margin: 0 10px;
 }
-.todo-list-item > .todo-list__task {
+li > label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-.todo-list-item >    input[type="text"] {
+li > input[type="text"] {
   width: 226px;
 }
 button.delete img {
@@ -129,13 +129,13 @@ button.delete img:hover {
 }
 
 /* Completed */
-.list-wramper#completed-tasks .todo-list__task {
+ul#completed-tasks label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.list-wramper .todo-list-item input[type=text] {
+ul li input[type=text] {
   display: none;
 }
 
