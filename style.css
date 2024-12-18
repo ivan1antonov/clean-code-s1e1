@@ -126,8 +126,8 @@ li > .task-input {
   transform: rotateZ(0);
 }
 /* Completed */
-#completed-tasks .task {
-  /* text-decoration: line-through; */
+#completed-tasks > li > label {
+  text-decoration: line-through;
   color: #888;
 }
 /* Edit Task */
